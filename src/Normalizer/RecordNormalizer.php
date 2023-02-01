@@ -48,7 +48,7 @@ class RecordNormalizer extends AbstractNormalizer implements ContextAwareDenorma
      *
      * @param object $object
      */
-    public function normalize($object, string $format = null, array $context = []): array
+    public function normalize($object, $format = null, array $context = []): array
     {
         $context = array_merge($this->defaultContext, $context);
         $context[self::ODOO_NORMALIZATION_CONTEXT] = true;
@@ -175,7 +175,7 @@ class RecordNormalizer extends AbstractNormalizer implements ContextAwareDenorma
      * @param mixed  $data
      * @param string $type
      */
-    public function denormalize($data, $type, string $format = null, array $context = []): ?object
+    public function denormalize($data, $type, $format = null, array $context = []): ?object
     {
         if (!$data) {
             return null;
@@ -271,7 +271,7 @@ class RecordNormalizer extends AbstractNormalizer implements ContextAwareDenorma
      * @param mixed  $data
      * @param string $type
      */
-    public function supportsDenormalization($data, $type, string $format = null, array $context = []): bool
+    public function supportsDenormalization($data, $type, $format = null, array $context = []): bool
     {
         return is_array($data) && $this->objectManager->supports($type);
     }
