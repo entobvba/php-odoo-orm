@@ -166,7 +166,7 @@ class RecordNormalizer extends AbstractNormalizer implements ContextAwareDenorma
     /**
      * @param mixed $data
      */
-    public function supportsNormalization($data, string $format = null, array $context = []): bool
+    public function supportsNormalization($data, $format = null, array $context = []): bool
     {
         return is_object($data) && $this->objectManager->supports($data);
     }
