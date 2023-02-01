@@ -1,5 +1,5 @@
 {
-    "name": "ang3/php-odoo-orm",
+    "name": "entobvba/php-odoo-orm",
     "description": "PHP object relational mapper (ORM) for Odoo databases.",
     "type": "library",
     "license": "MIT",
@@ -26,5 +26,8 @@
         "psr-4": {
             "Ang3\\Component\\Odoo\\ORM\\": "src/"
         }
+    },
+    "replace": {
+        "ang3/php-odoo-orm":"*"
     }
 }
